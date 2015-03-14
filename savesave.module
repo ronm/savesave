@@ -1,0 +1,91 @@
+<?php 
+/**
+ * Implements savesave_permission.
+*/
+/*function savesave_permission() {
+	return array(
+		'' => array(
+			'title' => t(''),
+		)  
+	);
+}*/
+
+/**
+ * Implements savesave_admin.
+*/
+/*function savesave_admin() {
+	$form = array();
+	
+	return system_settings_form($form);
+}*/
+
+/**
+ * Implements savesave_theme.
+*/
+/*function savesave_theme($existing, $type, $theme, $path) {
+	$themes = array( 
+		'' => array( 'template' => '', 'path' => drupal_get_path('module', '').'/layouts', ),
+	);
+
+	return $themes;
+}*/
+
+/**
+ * Implements savesave_menu.
+*/
+/*function savesave_menu() {
+
+  	$items = array();
+
+  	$items['''] = array(
+		'title' => '',
+		'description' => '',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array(''),
+		'access arguments' => array(''),
+	);
+	
+	return $items;
+}*/
+
+/**
+ * Implements savesave_block_info.
+*/
+/*function savesave_block_info() {
+	$blocks = array();
+	$blocks[''] = array( 'info' => t(''), );
+	
+	$blocks = array();
+	$blocks[''] = array( 'info' => t(''), );
+		
+	return $blocks;
+}*/
+/**
+ * Implements savesave_block_view.
+*/
+/*function savesave_block_view($delta = '') {
+	if ( $delta ) {
+		$block['subject'] = '';
+		$block['content'] = '';
+	}
+	
+	return $block;
+}*/
+
+/**
+ * Implements savesave_preprocess_html.
+**/
+//function savesave_preprocess_html(&$html) {}
+
+/**
+ * Implements savesave_preprocess_page.
+**/
+//function savesave_preprocess_page(&$page) {}
+
+/**
+ * Implements savesave_BASE_FORM_ID_form_alter.
+**/
+function savesave_form_node_form_alter(&$form, &$form_state) {
+	drupal_add_js(drupal_get_path('module', 'savesave') .'/js/save.js', 'file');
+	drupal_add_css(drupal_get_path('module', 'savesave') .'/css/save.css', 'file');
+}

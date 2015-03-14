@@ -1,0 +1,39 @@
+#snackbar {	
+	bottom: .25rem;
+	max-width: 85%;
+	position: fixed;
+	right: .25rem;
+	width: 300px;
+	z-index:90;
+}
+
+.savesave-message {	
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px .125rem rgba(0,0,0,.125);
+	box-sizing: border-box;
+	color: #666;
+	cursor: pointer;
+	padding: 2rem;
+	position: relative;
+	width: 100%;
+}
+
+.savesave-message:after {
+	color: #aaa;
+	content: "X";
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 1;
+	position: absolute;
+	right: .25rem;
+	text-align: right;
+	top: .25rem;
+}
+
+
+.savesave-message.fade-out {
+	opacity: 0;
+	
+	transition: opacity .5s ease-in-out;
+}
